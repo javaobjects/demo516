@@ -19,6 +19,15 @@ public class TestHashCode {
 		
 		//2.String类重写咯hashCode方法，对哈希值做了加工处理
 		String s1 = new String("123");
+		
+		String s3 = "yui";
+		
+		String s4 = "yui";
+		
+		System.out.println(s3.hashCode() + ":" + s4.hashCode());
+		
+		
+		
 		System.out.println(s1.hashCode());//48690
 		
 		String s2 = new String("321");
