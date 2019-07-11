@@ -32,6 +32,7 @@ public class TestEquals {
 		
 		Double d2 = new Double(789);
 		Double d3 = new Double(789);
+		System.out.println("d2 == d3 ?" + (d2 == d3));//false 比较的是地址
 		System.out.println(d2.equals(d3));//true
 		/**
 		 * 比较两个对象是否相等：用equals 和 ==
@@ -42,6 +43,11 @@ public class TestEquals {
 		 * Object类型：equals方法比较的是两个对象的地址,底层调用 hashCode方法获取对象的地址之后再做比较
 		 * Double类型：equals方法比较的是值
 		 * String类型：euqals方法比较的是字符串的内容
+		 * 自己定义的类型，equals方法比较什么可以自己写算法，不写的话比较地址
+		 * 
+		 * “==” 运算符：
+		 * 比较基本数据类型：相当于算术符号
+		 * 比较引用数据类型：比较引用的值，不能被覆盖。
 		 * 
 		 */
 		System.out.println(d2 == d3);//false
