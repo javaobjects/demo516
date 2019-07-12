@@ -15,5 +15,10 @@ public class Test1 {
 		String s3 = "";//一个空序列
 		
 		String s4 = "456";//常量池中 有了一个对象
+		
+		System.out.println(5+6+'A');
+		System.out.println(5+6+"A");
+		System.out.println(5+"A"+6);
+
 	}
 }
