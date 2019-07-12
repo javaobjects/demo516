@@ -2,6 +2,7 @@ package 日期类;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Test日期操作 {
@@ -35,6 +36,22 @@ public class Test日期操作 {
 			e.printStackTrace();
 		}
 		//3.如何获取 当前时间
+		//第一种：
+		Date d5 = new Date();
+		System.out.println("d5: " + d5);//d5: Fri Jul 12 09:49:25 CST 2019
+		//第二种：
+		Date d6 = new Date(System.currentTimeMillis());//d6: Fri Jul 12 09:49:25 CST 2019
+		System.out.println("d6: " + d6);
+		//第三种：使用日历
+		Calendar c = Calendar.getInstance();
+		
+//		c.get(Calendar.YEAR);
+//		c.get(Calendar.MONTH);//月要加一，西方月从0开始
+//		c.get(Calendar.DATE); 
+//		c.get(Calendar.HOUR_OF_DAY); 
+		System.out.println(c.get(Calendar.YEAR)+"年"+(c.get(Calendar.MONTH)+1)+"月"+
+				c.get(Calendar.DATE)+"日"+c.get(Calendar.HOUR_OF_DAY)+"时");//2019年7月12日9时
+		
 	}
 
 }
